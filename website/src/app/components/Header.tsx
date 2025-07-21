@@ -20,7 +20,7 @@ export default function Header() {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
+            <a href="/about" className="text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
               About
             </a>
             <a href="#services" className="text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
@@ -28,6 +28,9 @@ export default function Header() {
             </a>
             <a href="#contact" className="text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
               Contact
+            </a>
+            <a href="/eternity" className="text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
+              Eternity
             </a>
             <a href="#give" className="bg-[#ce6712] hover:bg-[#b85a0f] text-white px-4 py-2 rounded-lg font-medium transition-colors">
               Give Online
