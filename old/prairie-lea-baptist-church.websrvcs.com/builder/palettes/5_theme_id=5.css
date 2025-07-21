@@ -1,0 +1,317 @@
+[class^="icon-content-"],
+[class*=" icon-content-"] {
+  background-color: #ce6712;
+}
+#carousel .flexslider .slides li .caption {
+  color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+}
+a {
+  color: #ce6712;
+}
+a:hover {
+  color: #ce6712;
+}
+.address-block .tel.voice {
+  color: #444444;
+}
+.button,
+button,
+input[type="submit"] {
+  color: #ffffff;
+  background-image: -moz-linear-gradient(top, #ce6712 0%, #88440c 100%);
+  background-image: -ms-linear-gradient(top, #ce6712 0%, #88440c 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ce6712), to(#88440c));
+  background-image: -webkit-linear-gradient(top, #ce6712 0%, #88440c 100%);
+  background-image: -o-linear-gradient(top, #ce6712 0%, #88440c 100%);
+  background-image: linear-gradient(top, #ce6712 0%, #88440c 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ce6712', endColorstr='#88440c', GradientType=0);
+  zoom: 1;
+  border-bottom: 3px solid #70380a;
+}
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #ce6712;
+  background-image: none;
+  *display: inline;
+  *zoom: 1;
+}
+body {
+  color: #222222;
+  background-color: #eeeeee;
+}
+body a {
+  color: #ce6712;
+}
+#home-row-1 {
+  background-color: #ce6712;
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f6bf93), color-stop(100%, #ce6712));
+  background-image: -webkit-radial-gradient(center center, circle, #f6bf93 0%, #ce6712 100%);
+  background-image: -moz-radial-gradient(center center, circle, #f6bf93 0%, #ce6712 100%);
+  background-image: -ms-radial-gradient(center center, circle, #f6bf93 0%, #ce6712 100%);
+  background-image: -o-radial-gradient(center center, circle, #f6bf93 0%, #ce6712 100%);
+  background-repeat: no-repeat;
+  border-top: 1px solid #9f500e;
+  border-bottom: 1px solid #9f500e;
+}
+#preheader {
+  background-color: #222222;
+  color: #eeeeee;
+  border-bottom: 1px solid #fbfbfb;
+}
+#preheader a {
+  color: #eeeeee;
+}
+#preheader .submenu {
+  background-color: #222222;
+}
+#preheader .submenu a {
+  color: #eeeeee;
+}
+#header {
+  color: #444444;
+  background-color: #eaeaea;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#e4e4e4), color-stop(100%, #eeeeee), to(#dadada));
+  background-image: -webkit-linear-gradient(#e4e4e4, #eeeeee 100%, #dadada);
+  background-image: -moz-linear-gradient(top, #e4e4e4, #eeeeee 100%, #dadada);
+  background-image: -ms-linear-gradient(#e4e4e4, #eeeeee 100%, #dadada);
+  background-image: -o-linear-gradient(#e4e4e4, #eeeeee 100%, #dadada);
+  background-image: linear-gradient(#e4e4e4, #eeeeee 100%, #dadada);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e4e4e4', endColorstr='#dadada', GradientType=0);
+  zoom: 1;
+}
+#header h1,
+#header h2,
+#header h3,
+#header h4,
+#header h5,
+#header h6 {
+  color: #444444;
+}
+#header #logotype {
+  -webkit-text-shadow: 0 0 2px rgba(255, 255, 255, 0.33);
+  -moz-text-shadow: 0 0 2px rgba(255, 255, 255, 0.33);
+  -o-text-shadow: 0 0 2px rgba(255, 255, 255, 0.33);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.33);
+}
+#header #logotype a {
+  color: #e07014;
+}
+#header #tagline {
+  color: #444444;
+}
+#menu {
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #d9d9d9 100%);
+  background-image: -ms-linear-gradient(top, #ffffff 0%, #d9d9d9 100%);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#d9d9d9));
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #d9d9d9 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #d9d9d9 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #d9d9d9 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#d9d9d9', GradientType=0);
+  zoom: 1;
+}
+#menu ul {
+  border-right: 1px solid #ffffff;
+  border-left: 1px solid #dbdbdb;
+}
+#menu ul li {
+  border-left: 1px solid #ffffff;
+  border-right: 1px solid #dbdbdb;
+}
+#menu ul li.has-children:after {
+  display: block;
+  font-size: 21px;
+  line-height: 21px;
+  position: absolute;
+  top: 100%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  margin: 0;
+  margin-top: -21px;
+  margin-left: -7.5px;
+  color: #ce6712;
+  content: "\25be";
+  cursor: pointer;
+}
+#menu a {
+  color: #444444;
+}
+#menu li:hover {
+  border-color: #ffffff #ffffff transparent #ffffff;
+}
+#menu li:hover,
+#menu a:hover,
+#menu li:hover > a {
+  background-color: #ce6712;
+  color: #ffffff;
+}
+#menu .submenu,
+#menu .subsubmenu {
+  background-color: #ce6712;
+  border-bottom: 3px solid #70380a;
+}
+#menu .submenu ul li.has-children:after,
+#menu .subsubmenu ul li.has-children:after {
+  display: block;
+  font-size: 10px;
+  line-height: 10px;
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  right: 2px;
+  left: auto;
+  margin: 0;
+  margin-top: -6px;
+  color: #ce6712;
+  content: "\25ba";
+  cursor: pointer;
+}
+#menu .submenu a,
+#menu .subsubmenu a {
+  color: #ffffff;
+}
+#menu .submenu li:hover,
+#menu .subsubmenu li:hover,
+#menu .submenu a:hover,
+#menu .subsubmenu a:hover,
+#menu .submenu li:hover > a,
+#menu .subsubmenu li:hover > a {
+  background-color: #ffffff;
+  color: #ce6712;
+}
+#page-content #asides .aside {
+  background-color: #eeeeee;
+}
+#prefooter {
+  background-color: #222222;
+  color: #eeeeee;
+}
+#prefooter a {
+  color: #eeeeee;
+}
+#footer {
+  background-color: #e6e6e6;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dadada), color-stop(100%, #eeeeee), to(#c5c5c5));
+  background-image: -webkit-linear-gradient(#dadada, #eeeeee 100%, #c5c5c5);
+  background-image: -moz-linear-gradient(top, #dadada, #eeeeee 100%, #c5c5c5);
+  background-image: -ms-linear-gradient(#dadada, #eeeeee 100%, #c5c5c5);
+  background-image: -o-linear-gradient(#dadada, #eeeeee 100%, #c5c5c5);
+  background-image: linear-gradient(#dadada, #eeeeee 100%, #c5c5c5);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dadada', endColorstr='#c5c5c5', GradientType=0);
+  zoom: 1;
+  border-top: 1px solid #bbbbbb;
+  color: #444444;
+}
+#footer a {
+  color: #444444;
+}
+.lt-ie10 #home-row-1 .wrap {
+  background-color: #f6bf93;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=100, finishopacity=0, style=2);
+  zoom: 1;
+}
+@media (max-width: 480px), (max-width: 767px) {
+  #super-container {
+    /* first level */
+  
+    /* second level */
+  
+  }
+  #super-container #home-row-2 .block {
+    background-color: #ffffff;
+    color: #222222;
+  }
+  #super-container #page-content #article {
+    background-color: #ffffff;
+  }
+  #super-container #page-content #asides .aside {
+    background-color: #ffffff;
+    color: #222222;
+  }
+  #super-container #preheader ul li {
+    border-bottom: 1px solid rgba(238, 238, 238, 0.5);
+  }
+  #super-container #menu ul li {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  #super-container #menu ul li.has-children:after {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    right: 2px;
+    left: auto;
+    margin: 0;
+    margin-top: -12px;
+    color: #ce6712;
+    content: "\25be";
+    cursor: pointer;
+  }
+  #super-container #menu .submenu ul li.has-children:after,
+  #super-container #menu .subsubmenu ul li.has-children:after {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    bottom: auto;
+    right: 2px;
+    left: auto;
+    margin: 0;
+    margin-top: -12px;
+    color: #ce6712;
+    content: "\25be";
+    cursor: pointer;
+  }
+  #super-container #menu {
+    position: relative;
+  }
+  #super-container #menu:not( :target ) > a:first-of-type,
+  #super-container #menu:target > a:last-of-type {
+    display: block;
+  }
+  #super-container #menu > ul {
+    height: auto;
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  #super-container #menu:target > ul {
+    display: block;
+  }
+  #super-container #menu > ul > li {
+    width: 100%;
+    float: none;
+  }
+  #super-container #menu li ul {
+    position: static;
+  }
+  .btn-block {
+    width: 90%;
+    margin: 10px auto;
+    display: block !important;
+  }
+}
+.btn-block {
+  display: none;
+}
