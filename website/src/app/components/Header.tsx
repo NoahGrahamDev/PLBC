@@ -2,34 +2,45 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <div className="bg-gradient-to-b from-[#e4e4e4] via-[#eeeeee] to-[#dadada] border-b border-[#bbbbbb]">
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+    <header className="bg-white shadow-sm border-b border-gray-100">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-4">
-            <div className="w-16 h-16 bg-[#ce6712] rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-xl">PLBC</span>
+            <div className="w-12 h-12 bg-[#ce6712] rounded-full flex items-center justify-center">
+              <span className="text-white font-bold text-lg">PLBC</span>
             </div>
             <div>
-              <h1 className="text-2xl lg:text-3xl font-bold text-[#e07014] font-[var(--font-arvo)]">
+              <h1 className="text-xl lg:text-2xl font-bold text-[#ce6712] font-[var(--font-arvo)]">
                 Prairie Lea Baptist Church
               </h1>
-              <p className="text-[#444444] text-sm lg:text-base font-[var(--font-open-sans)]">
+              <p className="text-gray-600 text-sm font-[var(--font-open-sans)] hidden sm:block">
                 Shining His Light - Sharing His Word - Showing His Love
               </p>
             </div>
           </div>
           
-          <div className="bg-white/50 rounded-lg p-4 text-center lg:text-left">
-            <h4 className="font-bold text-[#444444] mb-2">Service Times</h4>
-            <div className="text-sm text-[#444444] space-y-1">
-              <p>Sunday Mornings - 9:15am Bible Study</p>
-              <p>10:30am Worship</p>
-              <p>Sunday Evenings - Coming Soon!</p>
-              <p>Wednesdays 6:00 pm Meal and Bible Study</p>
-            </div>
-          </div>
+          <nav className="hidden md:flex items-center space-x-8">
+            <a href="#about" className="text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
+              About
+            </a>
+            <a href="#services" className="text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
+              Services
+            </a>
+            <a href="#contact" className="text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
+              Contact
+            </a>
+            <a href="#give" className="bg-[#ce6712] hover:bg-[#b85a0f] text-white px-4 py-2 rounded-lg font-medium transition-colors">
+              Give Online
+            </a>
+          </nav>
+          
+          <button className="md:hidden p-2 text-gray-700 hover:text-[#ce6712]">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

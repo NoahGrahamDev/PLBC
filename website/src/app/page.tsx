@@ -1,16 +1,18 @@
 import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Carousel from './components/Carousel';
-import Welcome from './components/Welcome';
+import Hero from './components/Navigation';
+import Services from './components/Carousel';
+import About from './components/Welcome';
+import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#eeeeee]">
+    <div className="min-h-screen">
       <Header />
-      <Navigation />
-      <Carousel />
-      <Welcome />
+      <Hero />
+      <Services />
+      <About />
+      <Contact />
       <Footer />
     </div>
   );
