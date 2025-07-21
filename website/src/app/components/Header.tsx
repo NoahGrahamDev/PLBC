@@ -52,21 +52,21 @@ export default function Header() {
         </div>
         
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-100 shadow-lg">
-            <nav className="px-4 py-4 space-y-4">
-              <a href="/about" className="block text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
+          <div className="md:hidden bg-gray-50 border-t border-gray-100 shadow-lg rounded-b-xl mx-4 mb-4 animate-in slide-in-from-top-2 duration-200">
+            <nav className="px-6 py-6 space-y-4">
+              <a href="/about" className="block text-gray-700 hover:text-[#ce6712] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 About
               </a>
-              <a href="#services" className="block text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
+              <a href="#services" className="block text-gray-700 hover:text-[#ce6712] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Services
               </a>
-              <a href="#contact" className="block text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
+              <a href="#contact" className="block text-gray-700 hover:text-[#ce6712] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Contact
               </a>
-              <a href="/eternity" className="block text-gray-700 hover:text-[#ce6712] font-medium transition-colors">
+              <a href="/eternity" className="block text-gray-700 hover:text-[#ce6712] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Eternity
               </a>
-              <a href="#give" className="bg-[#ce6712] hover:bg-[#b85a0f] text-white px-4 py-2 rounded-lg font-medium transition-colors text-center block">
+              <a href="#give" className="bg-[#ce6712] hover:bg-[#b85a0f] text-white px-4 py-3 rounded-lg font-medium transition-all duration-200 text-center block shadow-sm hover:shadow-md">
                 Give Online
               </a>
             </nav>
