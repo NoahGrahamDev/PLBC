@@ -59,7 +59,6 @@ export default function ImageCarousel({ children, className = '' }: ImageCarouse
       <div 
         className="relative w-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
         style={{
-          height: '70vh',
           minHeight: '500px',
           backgroundImage: `url(${images[currentIndex]})`
         }}
@@ -68,7 +67,7 @@ export default function ImageCarousel({ children, className = '' }: ImageCarouse
         <div className="absolute inset-0 bg-black/30" />
         
         {children && (
-          <div className="relative z-10 h-full flex items-center justify-center py-20 lg:py-32">
+          <div className="relative z-10 h-full flex items-center justify-center py-12 md:py-20 lg:py-32">
             {children}
           </div>
         )}
