@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function About() {
   const missionPoints = [
@@ -29,8 +30,14 @@ export default function About() {
                 Thanks for visiting our website!
               </p>
               <div className="flex items-center gap-4 mt-8">
-                <div className="w-16 h-16 bg-[#2563eb] rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">KM</span>
+                <div className="w-16 h-16 relative rounded-full overflow-hidden">
+                  <Image
+                    src="/IMG_1930.jpeg"
+                    alt="Pastor Keith Maddox"
+                    fill
+                    className="object-cover"
+                    sizes="64px"
+                  />
                 </div>
                 <div>
                   <p className="font-semibold text-gray-900 text-lg">Pastor Keith Maddox</p>

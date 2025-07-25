@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -49,8 +50,14 @@ export default function About() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
-                <div className="w-24 h-24 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white font-bold text-2xl">KM</span>
+                <div className="w-24 h-24 relative rounded-full overflow-hidden mx-auto mb-6">
+                  <Image
+                    src="/IMG_1930.jpeg"
+                    alt="Keith Maddox"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 font-[var(--font-arvo)]">
                   Keith Maddox
@@ -69,8 +76,14 @@ export default function About() {
               </div>
 
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
-                <div className="w-24 h-24 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white font-bold text-2xl">MC</span>
+                <div className="w-24 h-24 relative rounded-full overflow-hidden mx-auto mb-6">
+                  <Image
+                    src="/IMG_1929.jpeg"
+                    alt="Megan Castanon"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 font-[var(--font-arvo)]">
                   Megan Castanon
@@ -89,8 +102,14 @@ export default function About() {
               </div>
 
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
-                <div className="w-24 h-24 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-6">
-                  <span className="text-white font-bold text-2xl">RL</span>
+                <div className="w-24 h-24 relative rounded-full overflow-hidden mx-auto mb-6">
+                  <Image
+                    src="/IMG_1928.jpeg"
+                    alt="Robert Lanning"
+                    fill
+                    className="object-cover"
+                    sizes="96px"
+                  />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 font-[var(--font-arvo)]">
                   Robert Lanning
