@@ -9,16 +9,21 @@ interface ImageCarouselProps {
 }
 
 export default function ImageCarousel({ children, className = '' }: ImageCarouselProps) {
-  const images = [
+  const images = React.useMemo(() => [
     '/IMG_1927.jpeg',
     '/IMG_1926.jpeg', 
     '/IMG_1925.jpeg',
     '/IMG_1924.jpeg',
     '/IMG_1923.jpeg'
-  ];
+  ], []);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [isDragging, setIsDragging] = useState(false);
+
+  const minSwipeDistance = 50;
 
   useEffect(() => {
     if (!isAutoPlaying) return;
@@ -29,6 +34,19 @@ export default function ImageCarousel({ children, className = '' }: ImageCarouse
 
     return () => clearInterval(interval);
   }, [isAutoPlaying, images.length]);
+
+  useEffect(() => {
+    const preloadImage = (src: string) => {
+      const img = new window.Image();
+      img.src = src;
+    };
+
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    const nextIndex = (currentIndex + 1) % images.length;
+    
+    preloadImage(images[prevIndex]);
+    preloadImage(images[nextIndex]);
+  }, [currentIndex, images]);
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
@@ -50,21 +68,101 @@ export default function ImageCarousel({ children, className = '' }: ImageCarouse
     setIsAutoPlaying(true);
   };
 
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      goToNext();
+    } else if (isRightSwipe) {
+      goToPrevious();
+    }
+  };
+
+  const onMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    setTouchStart(e.clientX);
+    setTouchEnd(null);
+  };
+
+  const onMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    setTouchEnd(e.clientX);
+  };
+
+  const onMouseUp = () => {
+    if (!isDragging || !touchStart || !touchEnd) {
+      setIsDragging(false);
+      return;
+    }
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe) {
+      goToNext();
+    } else if (isRightSwipe) {
+      goToPrevious();
+    }
+    
+    setIsDragging(false);
+  };
+
   return (
     <section 
       className={`relative overflow-hidden ${className}`}
       onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseLeave={() => {
+        handleMouseLeave();
+        setIsDragging(false);
+      }}
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+      onMouseDown={onMouseDown}
+      onMouseMove={onMouseMove}
+      onMouseUp={onMouseUp}
     >
       <div 
-        className="relative w-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+        className="relative w-full bg-cover bg-center bg-no-repeat transition-all duration-500 ease-out"
         style={{
           minHeight: '500px',
           backgroundImage: `url(${images[currentIndex]})`
         }}
       >
-        
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0 overflow-hidden">
+          <div 
+            className="flex transition-transform duration-500 ease-out h-full"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {images.map((image, index) => (
+              <div key={index} className="w-full h-full flex-shrink-0 relative min-h-[500px]">
+                <Image
+                  src={image}
+                  alt={`Church image ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-black/30" />
+              </div>
+            ))}
+          </div>
+        </div>
         
         {children && (
           <div className="relative z-10 h-full flex items-center justify-center py-12 md:py-20 lg:py-32">
