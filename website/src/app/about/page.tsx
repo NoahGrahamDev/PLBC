@@ -52,7 +52,7 @@ export default function About() {
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
                 <div className="w-24 h-24 relative rounded-full overflow-hidden mx-auto mb-6">
                   <Image
-                    src="/IMG_1930.jpeg"
+                    src="/IMG_1928.jpeg"
                     alt="Keith Maddox"
                     fill
                     className="object-cover"
@@ -104,7 +104,7 @@ export default function About() {
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
                 <div className="w-24 h-24 relative rounded-full overflow-hidden mx-auto mb-6">
                   <Image
-                    src="/IMG_1928.jpeg"
+                    src="/IMG_1929.jpeg"
                     alt="Robert Lanning"
                     fill
                     className="object-cover"
