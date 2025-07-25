@@ -32,7 +32,7 @@ export default function About() {
               <div className="flex items-center gap-4 mt-8">
                 <div className="w-16 h-16 relative rounded-full overflow-hidden">
                   <Image
-                    src="/IMG_1930.jpeg"
+                    src="/IMG_1928.jpeg"
                     alt="Pastor Keith Maddox"
                     fill
                     className="object-cover"
