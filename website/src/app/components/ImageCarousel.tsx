@@ -154,7 +154,12 @@ export default function ImageCarousel({ children, className = '' }: ImageCarouse
                   src={image}
                   alt={`Church image ${index + 1}`}
                   fill
-                  className="object-cover"
+                  className={`object-cover ${
+                    index === 0 ? 'object-bottom' : 
+                    index === 1 ? '' : 
+                    'object-center'
+                  }`}
+                  style={index === 1 ? { objectPosition: '75% 30%' } : undefined}
                   priority={index === 0}
                   sizes="100vw"
                 />
