@@ -3,7 +3,7 @@ import ImageCarousel from './ImageCarousel';
 
 export default function Hero() {
   return (
-    <ImageCarousel className="py-20 lg:py-32 min-h-[600px] lg:min-h-[700px]">
+    <ImageCarousel className="">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl lg:text-6xl font-bold text-white mb-6 font-[var(--font-arvo)] drop-shadow-lg">

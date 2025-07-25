@@ -56,29 +56,19 @@ export default function ImageCarousel({ children, className = '' }: ImageCarouse
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="relative h-full w-full">
-        {images.map((image, index) => (
-          <div
-            key={image}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              index === currentIndex ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <Image
-              src={image}
-              alt={`Prairie Lea Baptist Church - Image ${index + 1}`}
-              fill
-              className="object-cover"
-              priority={index === 0}
-              sizes="100vw"
-            />
-          </div>
-        ))}
+      <div 
+        className="relative w-full bg-cover bg-center bg-no-repeat transition-all duration-1000 ease-in-out"
+        style={{
+          height: '70vh',
+          minHeight: '500px',
+          backgroundImage: `url(${images[currentIndex]})`
+        }}
+      >
         
         <div className="absolute inset-0 bg-black/30" />
         
         {children && (
-          <div className="relative z-10 h-full flex items-center justify-center">
+          <div className="relative z-10 h-full flex items-center justify-center py-20 lg:py-32">
             {children}
           </div>
         )}
