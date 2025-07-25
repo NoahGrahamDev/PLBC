@@ -33,7 +33,7 @@ export default function Hero() {
           </div>
         </div>
         
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="mt-16 hidden md:grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           <div className="bg-white/15 backdrop-blur-sm rounded-lg p-6 text-white border border-white/20">
             <div className="text-3xl mb-3">📖</div>
             <h3 className="text-xl font-bold mb-2">Bible Study</h3>
