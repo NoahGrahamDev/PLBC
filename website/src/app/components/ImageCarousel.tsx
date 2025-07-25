@@ -159,7 +159,7 @@ export default function ImageCarousel({ children, className = '' }: ImageCarouse
                     index === 1 ? '' : 
                     'object-center'
                   }`}
-                  style={index === 1 ? { objectPosition: '60% 30%' } : undefined}
+                  style={index === 1 ? { objectPosition: '75% 30%' } : undefined}
                   priority={index === 0}
                   sizes="100vw"
                 />
