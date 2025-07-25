@@ -136,28 +136,36 @@ export default function ImageCarousel({ children, className = '' }: ImageCarouse
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
     >
-      <div className="relative w-full h-[500px] overflow-hidden">
-        <div 
-          className="flex transition-transform duration-500 ease-out h-full"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {images.map((image, index) => (
-            <div key={index} className="w-full h-full flex-shrink-0 relative">
-              <Image
-                src={image}
-                alt={`Church image ${index + 1}`}
-                fill
-                className="object-cover"
-                priority={index === 0}
-                sizes="100vw"
-              />
-              <div className="absolute inset-0 bg-black/30" />
-            </div>
-          ))}
+      <div 
+        className="relative w-full bg-cover bg-center bg-no-repeat transition-all duration-500 ease-out"
+        style={{
+          minHeight: '500px',
+          backgroundImage: `url(${images[currentIndex]})`
+        }}
+      >
+        <div className="absolute inset-0 overflow-hidden">
+          <div 
+            className="flex transition-transform duration-500 ease-out h-full"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {images.map((image, index) => (
+              <div key={index} className="w-full h-full flex-shrink-0 relative min-h-[500px]">
+                <Image
+                  src={image}
+                  alt={`Church image ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  priority={index === 0}
+                  sizes="100vw"
+                />
+                <div className="absolute inset-0 bg-black/30" />
+              </div>
+            ))}
+          </div>
         </div>
         
         {children && (
-          <div className="absolute inset-0 z-10 flex items-center justify-center py-12 md:py-20 lg:py-32">
+          <div className="relative z-10 h-full flex items-center justify-center py-12 md:py-20 lg:py-32">
             {children}
           </div>
         )}
