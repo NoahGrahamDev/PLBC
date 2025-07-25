@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Arvo, Open_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const arvo = Arvo({
@@ -30,6 +31,7 @@ export default function RootLayout({
         className={`${arvo.variable} ${openSans.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
