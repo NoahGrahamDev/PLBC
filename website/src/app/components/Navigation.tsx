@@ -33,23 +33,6 @@ export default function Hero() {
           </div>
         </div>
         
-        <div className="mt-16 hidden md:grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <div className="bg-white/15 backdrop-blur-sm rounded-lg p-6 text-white border border-white/20">
-            <div className="text-3xl mb-3">📖</div>
-            <h3 className="text-xl font-bold mb-2">Bible Study</h3>
-            <p className="text-white/95">Sunday 9:15 AM</p>
-          </div>
-          <div className="bg-white/15 backdrop-blur-sm rounded-lg p-6 text-white border border-white/20">
-            <div className="text-3xl mb-3">🙏</div>
-            <h3 className="text-xl font-bold mb-2">Worship Service</h3>
-            <p className="text-white/95">Sunday 10:30 AM</p>
-          </div>
-          <div className="bg-white/15 backdrop-blur-sm rounded-lg p-6 text-white border border-white/20">
-            <div className="text-3xl mb-3">🤝</div>
-            <h3 className="text-xl font-bold mb-2">Fellowship</h3>
-            <p className="text-white/95">Wednesday 6:00 PM</p>
-          </div>
-        </div>
       </div>
     </ImageCarousel>
   );
