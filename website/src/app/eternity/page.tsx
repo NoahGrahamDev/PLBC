@@ -27,7 +27,7 @@ export default function Eternity() {
             </h2>
             
             <div className="space-y-8">
-              <div className="border-l-4 border-[#ce6712] pl-6">
+              <div className="border-l-4 border-[#2563eb] pl-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 font-[var(--font-arvo)]">
                   1. We are all sinners by nature and by choice.
                 </h3>
@@ -36,7 +36,7 @@ export default function Eternity() {
                 </p>
               </div>
 
-              <div className="border-l-4 border-[#ce6712] pl-6">
+              <div className="border-l-4 border-[#2563eb] pl-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 font-[var(--font-arvo)]">
                   2. We receive eternal life as a free gift.
                 </h3>
@@ -45,7 +45,7 @@ export default function Eternity() {
                 </p>
               </div>
 
-              <div className="border-l-4 border-[#ce6712] pl-6">
+              <div className="border-l-4 border-[#2563eb] pl-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 font-[var(--font-arvo)]">
                   3. God proves His love for us.
                 </h3>
@@ -54,7 +54,7 @@ export default function Eternity() {
                 </p>
               </div>
 
-              <div className="border-l-4 border-[#ce6712] pl-6">
+              <div className="border-l-4 border-[#2563eb] pl-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 font-[var(--font-arvo)]">
                   4. We must trust and surrender to Jesus as Lord.
                 </h3>
@@ -67,14 +67,14 @@ export default function Eternity() {
                 <h3 className="text-xl font-bold text-gray-900 mb-4 font-[var(--font-arvo)] text-center">
                   A sinner&rsquo;s prayer for God&rsquo;s forgiveness:
                 </h3>
-                <div className="bg-white rounded-lg p-6 border-l-4 border-[#ce6712]">
+                <div className="bg-white rounded-lg p-6 border-l-4 border-[#2563eb]">
                   <p className="text-gray-700 font-[var(--font-open-sans)] italic leading-relaxed">
                     &ldquo;Dear God, I know I&rsquo;m a sinner. I know my sin deserves to be punished. I believe Christ is the Son of God, who died for me and rose from the grave. I want to turn from my sin and trust Jesus Christ alone as my Savior. Thank you for the forgiveness and everlasting life I can now have through faith in Jesus. In Jesus&rsquo; name, Amen.&rdquo;
                   </p>
                 </div>
               </div>
 
-              <div className="border-l-4 border-[#ce6712] pl-6">
+              <div className="border-l-4 border-[#2563eb] pl-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 font-[var(--font-arvo)]">
                   5. Our assurance of salvation is through Jesus
                 </h3>
@@ -85,7 +85,7 @@ export default function Eternity() {
             </div>
 
             <div className="mt-12 text-center">
-              <div className="bg-[#ce6712] text-white rounded-lg p-6">
+              <div className="bg-[#2563eb] text-white rounded-lg p-6">
                 <h3 className="text-xl font-bold mb-2 font-[var(--font-arvo)]">
                   Ready to Take the Next Step?
                 </h3>

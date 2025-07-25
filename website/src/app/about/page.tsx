@@ -49,13 +49,13 @@ export default function About() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
-                <div className="w-24 h-24 bg-[#ce6712] rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white font-bold text-2xl">KM</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 font-[var(--font-arvo)]">
                   Keith Maddox
                 </h3>
-                <p className="text-[#ce6712] font-semibold mb-4 font-[var(--font-open-sans)]">
+                <p className="text-[#2563eb] font-semibold mb-4 font-[var(--font-open-sans)]">
                   Pastor
                 </p>
                 <div className="text-gray-700 font-[var(--font-open-sans)] text-left">
@@ -69,13 +69,13 @@ export default function About() {
               </div>
 
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
-                <div className="w-24 h-24 bg-[#ce6712] rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white font-bold text-2xl">MC</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 font-[var(--font-arvo)]">
                   Megan Castanon
                 </h3>
-                <p className="text-[#ce6712] font-semibold mb-4 font-[var(--font-open-sans)]">
+                <p className="text-[#2563eb] font-semibold mb-4 font-[var(--font-open-sans)]">
                   Youth Minister
                 </p>
                 <div className="text-gray-700 font-[var(--font-open-sans)] text-left">
@@ -89,13 +89,13 @@ export default function About() {
               </div>
 
               <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-8 text-center">
-                <div className="w-24 h-24 bg-[#ce6712] rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-24 h-24 bg-[#2563eb] rounded-full flex items-center justify-center mx-auto mb-6">
                   <span className="text-white font-bold text-2xl">RL</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-2 font-[var(--font-arvo)]">
                   Robert Lanning
                 </h3>
-                <p className="text-[#ce6712] font-semibold mb-4 font-[var(--font-open-sans)]">
+                <p className="text-[#2563eb] font-semibold mb-4 font-[var(--font-open-sans)]">
                   Music Minister
                 </p>
                 <div className="text-gray-700 font-[var(--font-open-sans)] text-left">
