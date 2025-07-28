@@ -43,7 +43,7 @@ export default function Header() {
             <a href="/eternity" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Eternity
             </a>
-            <a href="#give" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded-lg font-medium transition-colors">
+            <a href="https://app.easytithe.com/app/giving/plbctexas" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded-lg font-medium transition-colors">
               Give Online
             </a>
           </nav>
@@ -73,7 +73,7 @@ export default function Header() {
               <a href="/eternity" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Eternity
               </a>
-              <a href="#give" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium transition-all duration-200 text-center block shadow-sm hover:shadow-md">
+              <a href="https://app.easytithe.com/app/giving/plbctexas" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium transition-all duration-200 text-center block shadow-sm hover:shadow-md">
                 Give Online
               </a>
             </nav>
