@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -24,6 +22,18 @@ export async function POST(request: NextRequest) {
         return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 });
       }
     }
+
+    if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'your_resend_api_key_here') {
+      console.log('Development mode: Email would be sent with the following data:', {
+        name, email, phone, message
+      });
+      return NextResponse.json({ 
+        success: true, 
+        message: 'Development mode: Form submitted successfully (email not actually sent)' 
+      });
+    }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     const { error } = await resend.emails.send({
       from: 'Contact Form <noreply@plbctexas.org>',
