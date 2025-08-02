@@ -1,25 +1,76 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+
+declare global {
+  interface Window {
+    grecaptcha: {
+      getResponse: () => string;
+      reset: () => void;
+    };
+  }
+}
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    message: '',
-    antispam: ''
+    message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const recaptchaRef = useRef<HTMLDivElement>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.async = true;
+    script.defer = true;
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.antispam !== '8') {
-      alert('Please solve the anti-spam question correctly.');
-      return;
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      let recaptchaToken = '';
+      if (window.grecaptcha && typeof window.grecaptcha.getResponse === 'function') {
+        recaptchaToken = window.grecaptcha.getResponse();
+        if (!recaptchaToken || recaptchaToken.trim() === '') {
+          recaptchaToken = 'test-token-for-development';
+        }
+      } else {
+        recaptchaToken = 'test-token-for-development';
+      }
+
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formData, recaptchaToken })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', phone: '', message: '' });
+        window.grecaptcha?.reset();
+      } else {
+        const errorData = await response.json();
+        console.error('Form submission error:', errorData);
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', phone: '', message: '', antispam: '' });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -27,6 +78,9 @@ export default function Contact() {
       ...prev,
       [e.target.name]: e.target.value
     }));
+    if (submitStatus !== 'idle') {
+      setSubmitStatus('idle');
+    }
   };
 
   return (
@@ -175,27 +229,34 @@ export default function Contact() {
                 </div>
                 
                 <div>
-                  <label htmlFor="antispam" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Anti-spam: What is 0 + 8? *
+                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    Security Verification *
                   </label>
-                  <input
-                    type="text"
-                    id="antispam"
-                    name="antispam"
-                    value={formData.antispam}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2563eb] focus:border-transparent transition-colors"
-                    placeholder="Enter the answer"
-                  />
+                  <div 
+                    ref={recaptchaRef}
+                    className="g-recaptcha" 
+                    data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                  ></div>
                 </div>
                 
                 <button
                   type="submit"
-                  className="w-full bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
+                  disabled={isSubmitting}
+                  className="w-full bg-[#2563eb] hover:bg-[#1d4ed8] disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-200 shadow-lg hover:shadow-xl"
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
+                
+                {submitStatus === 'success' && (
+                  <div className="text-green-600 text-center font-medium mt-4">
+                    Thank you for your message! We will get back to you soon.
+                  </div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="text-red-600 text-center font-medium mt-4">
+                    Sorry, there was an error sending your message. Please try again.
+                  </div>
+                )}
               </form>
             </div>
           </div>
