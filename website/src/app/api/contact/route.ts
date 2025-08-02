@@ -33,9 +33,15 @@ export async function POST(request: NextRequest) {
       });
     }
 
+    console.log('Production mode: Attempting to send email with Resend');
+    console.log('API Key present:', !!process.env.RESEND_API_KEY);
+    console.log('API Key length:', process.env.RESEND_API_KEY?.length);
+    console.log('From address:', 'Contact Form <noah@nloveapp.com>');
+    console.log('To address:', 'noahgrahamdev@gmail.com');
+
     const resend = new Resend(process.env.RESEND_API_KEY);
 
-    const { error } = await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: 'Contact Form <noah@nloveapp.com>',
       to: ['noahgrahamdev@gmail.com'],
       subject: `New Contact Form Submission from ${name}`,
@@ -50,9 +56,16 @@ export async function POST(request: NextRequest) {
     });
 
     if (error) {
-      console.error('Resend error:', error);
-      return NextResponse.json({ error: 'Failed to send email' }, { status: 500 });
+      console.error('Resend error details:', JSON.stringify(error, null, 2));
+      console.error('Error type:', typeof error);
+      console.error('Error message:', error.message);
+      return NextResponse.json({ 
+        error: 'Failed to send email', 
+        details: error.message || 'Unknown error'
+      }, { status: 500 });
     }
+
+    console.log('Email sent successfully:', data);
 
     return NextResponse.json({ success: true });
   } catch (error) {
