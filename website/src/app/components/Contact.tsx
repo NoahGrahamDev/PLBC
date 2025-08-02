@@ -23,15 +23,17 @@ export default function Contact() {
   const recaptchaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
+    if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
+      const script = document.createElement('script');
+      script.src = 'https://www.google.com/recaptcha/api.js';
+      script.async = true;
+      script.defer = true;
+      document.head.appendChild(script);
 
-    return () => {
-      document.head.removeChild(script);
-    };
+      return () => {
+        document.head.removeChild(script);
+      };
+    }
   }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -228,16 +230,18 @@ export default function Contact() {
                   />
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Security Verification *
-                  </label>
-                  <div 
-                    ref={recaptchaRef}
-                    className="g-recaptcha" 
-                    data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                  ></div>
-                </div>
+                {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                      Security Verification *
+                    </label>
+                    <div 
+                      ref={recaptchaRef}
+                      className="g-recaptcha" 
+                      data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                    ></div>
+                  </div>
+                )}
                 
                 <button
                   type="submit"
