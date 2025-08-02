@@ -20,6 +20,7 @@ export default function Contact() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
   const recaptchaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -61,15 +62,18 @@ export default function Contact() {
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', phone: '', message: '' });
+        setErrorMessage('');
         window.grecaptcha?.reset();
       } else {
         const errorData = await response.json();
         console.error('Form submission error:', errorData);
         setSubmitStatus('error');
+        setErrorMessage(errorData.error || 'Sorry, there was an error sending your message. Please try again.');
       }
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus('error');
+      setErrorMessage('Sorry, there was an error sending your message. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -82,6 +86,7 @@ export default function Contact() {
     }));
     if (submitStatus !== 'idle') {
       setSubmitStatus('idle');
+      setErrorMessage('');
     }
   };
 
@@ -258,7 +263,7 @@ export default function Contact() {
                 )}
                 {submitStatus === 'error' && (
                   <div className="text-red-600 text-center font-medium mt-4">
-                    Sorry, there was an error sending your message. Please try again.
+                    {errorMessage}
                   </div>
                 )}
               </form>
