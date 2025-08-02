@@ -37,7 +37,7 @@ export async function POST(request: NextRequest) {
 
     const { error } = await resend.emails.send({
       from: 'Contact Form <noreply@plbctexas.org>',
-      to: ['info@plbctexas.org'],
+      to: ['noahgrahamdev@gmail.com'],
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
