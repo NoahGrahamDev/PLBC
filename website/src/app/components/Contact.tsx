@@ -44,10 +44,20 @@ export default function Contact() {
 
     try {
       let recaptchaToken = '';
-      if (window.grecaptcha && typeof window.grecaptcha.getResponse === 'function') {
-        recaptchaToken = window.grecaptcha.getResponse();
-        if (!recaptchaToken || recaptchaToken.trim() === '') {
-          recaptchaToken = 'test-token-for-development';
+      if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
+        if (window.grecaptcha && typeof window.grecaptcha.getResponse === 'function') {
+          recaptchaToken = window.grecaptcha.getResponse();
+          if (!recaptchaToken || recaptchaToken.trim() === '') {
+            setSubmitStatus('error');
+            setErrorMessage('Please complete the reCAPTCHA verification.');
+            setIsSubmitting(false);
+            return;
+          }
+        } else {
+          setSubmitStatus('error');
+          setErrorMessage('reCAPTCHA is loading. Please wait and try again.');
+          setIsSubmitting(false);
+          return;
         }
       } else {
         recaptchaToken = 'test-token-for-development';
