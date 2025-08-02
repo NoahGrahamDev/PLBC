@@ -7,21 +7,34 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
     const { name, email, phone, message, recaptchaToken } = body;
 
-    if (!recaptchaToken) {
-      return NextResponse.json({ error: 'reCAPTCHA token is required' }, { status: 400 });
+    if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && process.env.RECAPTCHA_SECRET_KEY) {
+      if (!recaptchaToken) {
+        return NextResponse.json({ error: 'reCAPTCHA token is required' }, { status: 400 });
+      }
+
+      if (recaptchaToken !== 'test-token-for-development') {
+        const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`
+        });
+        
+        const recaptchaData = await recaptchaResponse.json();
+        if (!recaptchaData.success) {
+          return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 });
+        }
+      }
     }
 
-    if (recaptchaToken !== 'test-token-for-development') {
-      const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`
-      });
-      
-      const recaptchaData = await recaptchaResponse.json();
-      if (!recaptchaData.success) {
-        return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 });
-      }
+    if (!name || !email || !phone || !message) {
+      return NextResponse.json({ 
+        error: 'All fields are required (name, email, phone, message)' 
+      }, { status: 400 });
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      return NextResponse.json({ error: 'Please enter a valid email address' }, { status: 400 });
     }
 
     if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'your_resend_api_key_here') {
