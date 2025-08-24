@@ -12,7 +12,7 @@ export default function Hero() {
           <p className="text-xl lg:text-2xl text-white/95 mb-8 font-[var(--font-open-sans)] drop-shadow-md">
             Shining His Light, Sharing His Word, Showing His Love since 1850
           </p>
-          <p className="text-lg text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+          <p className="text-lg text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-md hidden sm:block">
             We are a church on mission and engaged in ministry, striving to make a real difference in our world for Jesus Christ. 
             Whatever your church background — or no church background at all — there is a place for you here.
           </p>
