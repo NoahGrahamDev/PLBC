@@ -3,12 +3,9 @@ import Image from 'next/image';
 
 export default function About() {
   const missionPoints = [
-    'Reaching and touching people since 1850',
-    'Shining His Light in our community',
-    'Sharing His Word through biblical teaching',
-    'Showing His Love through service and fellowship',
-    'Making a real difference in our world for Jesus Christ',
-    'Welcoming all backgrounds and experiences'
+    'Shining His Light to our community and the world by intentionally sharing the good news of Christ to make disciples.',
+    'Sharing His Word with those around us, teaching and encouraging the faith family and applying the precepts and teaching of scripture to everyday life and grow disciple makers.',
+    'Showing His Love for each other and those around us by actively using our spiritual gifts and resources and to be an example of a disciple of Christ.'
   ];
 
   return (

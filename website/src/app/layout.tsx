@@ -18,7 +18,7 @@ const openSans = Open_Sans({
 
 export const metadata: Metadata = {
   title: "Prairie Lea Baptist Church",
-  description: "Baptist Church in Caldwell County Texas - Shining His Light, Sharing His Word, Showing His Love",
+  description: "Baptist Church in Caldwell County Texas - Shining His Light to our community and the world by intentionally sharing the good news of Christ to make disciples.",
 };
 
 export default function RootLayout({
