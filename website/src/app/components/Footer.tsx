@@ -91,6 +91,14 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">
             © 2024 Prairie Lea Baptist Church. All rights reserved.
           </p>
+          <div className="flex flex-wrap items-center gap-4 text-sm">
+            <a href="/about" className="text-gray-300 hover:text-white">About</a>
+            <a href="/sermons" className="text-gray-300 hover:text-white">Sermons</a>
+            <a href="/visit" className="text-gray-300 hover:text-white">Plan a Visit</a>
+            <a href="/eternity" className="text-gray-300 hover:text-white">Eternity</a>
+            <a href="#contact" className="text-gray-300 hover:text-white">Contact</a>
+            <a href="https://app.easytithe.com/app/giving/plbctexas" className="text-gray-300 hover:text-white">Give</a>
+          </div>
           <p className="text-gray-400 text-sm">
             Powered by <a href="https://nextjs.org" target="_blank" rel="noopener noreferrer" className="text-[#2563eb] hover:underline">Next.js</a>
           </p>

@@ -34,11 +34,17 @@ export default function Header() {
             <a href="/about" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               About
             </a>
+            <a href="/sermons" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
+              Sermons
+            </a>
             <a href="#services" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Services
             </a>
             <a href="#contact" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Contact
+            </a>
+            <a href="/visit" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
+              Plan a Visit
             </a>
             <a href="/eternity" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Eternity
@@ -64,11 +70,17 @@ export default function Header() {
               <a href="/about" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 About
               </a>
+              <a href="/sermons" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
+                Sermons
+              </a>
               <a href="#services" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Services
               </a>
               <a href="#contact" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Contact
+              </a>
+              <a href="/visit" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
+                Plan a Visit
               </a>
               <a href="/eternity" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Eternity
