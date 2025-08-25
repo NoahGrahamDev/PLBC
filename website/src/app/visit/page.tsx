@@ -33,15 +33,13 @@ export default function VisitPage() {
                 <h2 className="text-xl font-bold text-gray-900 font-[var(--font-arvo)]">Parking</h2>
               </div>
               <p className="text-gray-700 font-[var(--font-open-sans)]">
-                There is a parking lot behind the church as well as parking on the side of the church near the street.
+                There is a parking lot beside the church as well as parking on the side of the church near the street.
               </p>
             </div>
 
             <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-3 mb-3">
-                <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+                <span aria-hidden="true" className="text-2xl">👕</span>
                 <h2 className="text-xl font-bold text-gray-900 font-[var(--font-arvo)]">What to Wear</h2>
               </div>
               <p className="text-gray-700 font-[var(--font-open-sans)]">
@@ -79,9 +77,7 @@ export default function VisitPage() {
 
             <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-3 mb-3">
-                <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 009.288 0" />
-                </svg>
+                <span aria-hidden="true" className="text-2xl">🍼</span>
                 <h2 className="text-xl font-bold text-gray-900 font-[var(--font-arvo)]">Nursery</h2>
               </div>
               <p className="text-gray-700 font-[var(--font-open-sans)]">
@@ -91,9 +87,7 @@ export default function VisitPage() {
 
             <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-3 mb-3">
-                <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
-                </svg>
+                <span aria-hidden="true" className="text-2xl">📖</span>
                 <h2 className="text-xl font-bold text-gray-900 font-[var(--font-arvo)]">Service Times</h2>
               </div>
               <ul className="space-y-2 text-gray-700 font-[var(--font-open-sans)]">
@@ -117,7 +111,7 @@ export default function VisitPage() {
               and the preaching is from the Bible with practical application for everyday life.
             </p>
             <p className="text-gray-700 font-[var(--font-open-sans)]">
-              If you have questions when you arrive, just let one of our ushers know and they&apos;ll be happy to help.
+              If you have questions when you arrive, just let one of our members know and they&apos;ll be happy to help.
             </p>
           </div>
         </div>
