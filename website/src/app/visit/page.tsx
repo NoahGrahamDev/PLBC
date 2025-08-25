@@ -93,9 +93,10 @@ export default function VisitPage() {
 
             <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-3 mb-3">
-                <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h9a3 3 0 013 3v13a3 3 0 00-3-3H7a2 2 0 00-2 2V5z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 8h2M12 6v6" />
+                <svg className="w-6 h-6 text-[#2563eb]" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                  <path d="M4 6.5A2.5 2.5 0 016.5 4H12a2 2 0 012 2v14h-7.5A2.5 2.5 0 014 17.5v-11z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M20 6.5A2.5 2.5 0 0017.5 4H12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M13 8h2M14 6v4" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
                 <h2 className="text-xl font-bold text-gray-900 font-[var(--font-arvo)]">Service Times</h2>
               </div>
