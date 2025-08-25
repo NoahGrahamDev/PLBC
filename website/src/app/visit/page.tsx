@@ -39,7 +39,9 @@ export default function VisitPage() {
 
             <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-3 mb-3">
-                <span aria-hidden="true" className="text-2xl">👕</span>
+                <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 3l5 2-3 4v10a2 2 0 01-2 2H8a2 2 0 01-2-2V9L3 5l5-2 2 2h4l2-2z" />
+                </svg>
                 <h2 className="text-xl font-bold text-gray-900 font-[var(--font-arvo)]">What to Wear</h2>
               </div>
               <p className="text-gray-700 font-[var(--font-open-sans)]">
@@ -77,7 +79,11 @@ export default function VisitPage() {
 
             <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-3 mb-3">
-                <span aria-hidden="true" className="text-2xl">🍼</span>
+                <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 4h6v3H9z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h8l1 2v8a3 3 0 01-3 3H10a3 3 0 01-3-3V9l1-2z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 11h4M12 14h4" />
+                </svg>
                 <h2 className="text-xl font-bold text-gray-900 font-[var(--font-arvo)]">Nursery</h2>
               </div>
               <p className="text-gray-700 font-[var(--font-open-sans)]">
@@ -87,7 +93,10 @@ export default function VisitPage() {
 
             <div className="p-6 bg-white rounded-xl shadow-sm border border-gray-100">
               <div className="flex items-center gap-3 mb-3">
-                <span aria-hidden="true" className="text-2xl">📖</span>
+                <svg className="w-6 h-6 text-[#2563eb]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h9a3 3 0 013 3v13a3 3 0 00-3-3H7a2 2 0 00-2 2V5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 8h2M12 6v6" />
+                </svg>
                 <h2 className="text-xl font-bold text-gray-900 font-[var(--font-arvo)]">Service Times</h2>
               </div>
               <ul className="space-y-2 text-gray-700 font-[var(--font-open-sans)]">
