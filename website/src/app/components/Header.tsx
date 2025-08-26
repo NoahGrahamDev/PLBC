@@ -21,7 +21,7 @@ export default function Header() {
               />
             </div>
             <div>
-              <h1 className="text-xl lg:text-2xl font-bold text-[#2563eb] font-[var(--font-arvo)]">
+              <h1 className="text-lg lg:text-2xl font-bold text-[#2563eb] font-[var(--font-arvo)]">
                 Prairie Lea Baptist Church
               </h1>
               <p className="text-gray-600 text-sm font-[var(--font-open-sans)] hidden sm:block">
@@ -44,7 +44,7 @@ export default function Header() {
               Contact
             </a>
             <a href="/visit" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
-              Plan a Visit
+              Visit
             </a>
             <a href="/eternity" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Eternity
@@ -80,7 +80,7 @@ export default function Header() {
                 Contact
               </a>
               <a href="/visit" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
-                Plan a Visit
+                Visit
               </a>
               <a href="/eternity" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Eternity
