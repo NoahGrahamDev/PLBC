@@ -11,17 +11,17 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-            <div className="w-32 h-16 relative">
+            <div className="w-28 h-14 relative">
               <Image
                 src="/swoosh-logo.png"
                 alt="Prairie Lea Baptist Church Swoosh Logo"
                 fill
                 className="object-contain"
-                sizes="128px"
+                sizes="112px"
               />
             </div>
             <div>
-              <h1 className="text-sm lg:text-2xl font-bold text-[#2563eb] font-[var(--font-arvo)]">
+              <h1 className="text-base lg:text-2xl font-bold text-[#2563eb] font-[var(--font-arvo)]">
                 Prairie Lea Baptist Church
               </h1>
               <p className="text-gray-600 text-sm font-[var(--font-open-sans)] hidden sm:block">
