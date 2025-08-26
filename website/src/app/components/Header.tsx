@@ -21,7 +21,7 @@ export default function Header() {
               />
             </div>
             <div>
-              <h1 className="text-base lg:text-2xl font-bold text-[#2563eb] font-[var(--font-arvo)]">
+              <h1 className="text-lg lg:text-2xl font-bold text-[#2563eb] font-[var(--font-arvo)]">
                 Prairie Lea Baptist Church
               </h1>
               <p className="text-gray-600 text-sm font-[var(--font-open-sans)] hidden sm:block">
