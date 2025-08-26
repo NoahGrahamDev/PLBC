@@ -8,13 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 relative">
+              <div className="w-24 h-12 relative">
                 <Image
-                  src="/PLBC_LOGO.jpeg"
-                  alt="Prairie Lea Baptist Church Logo"
+                  src="/swoosh-logo.png"
+                  alt="Prairie Lea Baptist Church Swoosh Logo"
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="96px"
                 />
               </div>
               <div>
@@ -94,7 +94,7 @@ export default function Footer() {
           <div className="flex flex-wrap items-center gap-4 text-sm">
             <a href="/about" className="text-gray-300 hover:text-white">About</a>
             <a href="/sermons" className="text-gray-300 hover:text-white">Sermons</a>
-            <a href="/visit" className="text-gray-300 hover:text-white">Plan a Visit</a>
+            <a href="/visit" className="text-gray-300 hover:text-white">Visit</a>
             <a href="/eternity" className="text-gray-300 hover:text-white">Eternity</a>
             <a href="#contact" className="text-gray-300 hover:text-white">Contact</a>
             <a href="https://app.easytithe.com/app/giving/plbctexas" className="text-gray-300 hover:text-white">Give</a>

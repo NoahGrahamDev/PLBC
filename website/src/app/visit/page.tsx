@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Plan a Visit | Prairie Lea Baptist Church",
+  title: "Visit | Prairie Lea Baptist Church",
   description: "Plan your visit to Prairie Lea Baptist Church: parking, what to expect, service times, accessibility, and nursery information.",
 };
 
@@ -15,7 +15,7 @@ export default function VisitPage() {
         <div className="max-w-6xl mx-auto px-4 py-16">
           <div className="mb-10">
             <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 font-[var(--font-arvo)]">
-              Plan a Visit
+              Visit
             </h1>
             <p className="mt-4 text-lg text-gray-700 font-[var(--font-open-sans)]">
               We&apos;re glad you&apos;re here. Whether it&apos;s your first time or first time in a while,

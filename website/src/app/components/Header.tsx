@@ -11,17 +11,17 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-            <div className="w-12 h-12 relative">
+            <div className="w-28 h-14 relative">
               <Image
-                src="/PLBC_LOGO.jpeg"
-                alt="Prairie Lea Baptist Church Logo"
+                src="/swoosh-logo.png"
+                alt="Prairie Lea Baptist Church Swoosh Logo"
                 fill
                 className="object-contain"
-                sizes="48px"
+                sizes="112px"
               />
             </div>
             <div>
-              <h1 className="text-xl lg:text-2xl font-bold text-[#2563eb] font-[var(--font-arvo)]">
+              <h1 className="text-lg lg:text-2xl font-bold text-[#2563eb] font-[var(--font-arvo)]">
                 Prairie Lea Baptist Church
               </h1>
               <p className="text-gray-600 text-sm font-[var(--font-open-sans)] hidden sm:block">
@@ -30,7 +30,7 @@ export default function Header() {
             </div>
           </Link>
           
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 ml-12">
             <a href="/about" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               About
             </a>
@@ -44,7 +44,7 @@ export default function Header() {
               Contact
             </a>
             <a href="/visit" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
-              Plan a Visit
+              Visit
             </a>
             <a href="/eternity" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Eternity
@@ -80,7 +80,7 @@ export default function Header() {
                 Contact
               </a>
               <a href="/visit" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
-                Plan a Visit
+                Visit
               </a>
               <a href="/eternity" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Eternity
