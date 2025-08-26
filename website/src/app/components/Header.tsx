@@ -30,7 +30,7 @@ export default function Header() {
             </div>
           </Link>
           
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8 ml-12">
             <a href="/about" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               About
             </a>
