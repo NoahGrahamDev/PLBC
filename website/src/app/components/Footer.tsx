@@ -8,13 +8,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 relative">
+              <div className="w-16 h-10 relative">
                 <Image
-                  src="/PLBC_LOGO.jpeg"
-                  alt="Prairie Lea Baptist Church Logo"
+                  src="/swoosh-logo.png"
+                  alt="Prairie Lea Baptist Church Swoosh Logo"
                   fill
                   className="object-contain"
-                  sizes="40px"
+                  sizes="64px"
                 />
               </div>
               <div>
