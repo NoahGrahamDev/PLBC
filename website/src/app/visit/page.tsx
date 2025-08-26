@@ -33,7 +33,7 @@ export default function VisitPage() {
                 <h2 className="text-xl font-bold text-gray-900 font-[var(--font-arvo)]">Parking</h2>
               </div>
               <p className="text-gray-700 font-[var(--font-open-sans)]">
-                There is a parking lot beside the church as well as parking on the side of the church near the street.
+                You&apos;ll find convenient parking right beside the church building, as well as additional street-side parking along San Marcos Highway. Don&apos;t worry about finding a spot—there&apos;s always room for you!
               </p>
             </div>
 

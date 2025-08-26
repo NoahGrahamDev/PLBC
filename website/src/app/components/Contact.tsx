@@ -168,7 +168,7 @@ export default function Contact() {
                 <h4 className="font-bold text-gray-900 mb-2">Directions</h4>
                 <p className="text-gray-600 text-sm">
                   We&apos;re located on San Marcos Highway in Prairie Lea, Texas. 
-                  Look for our church sign and parking is available on-site.
+                  Look for our church sign—you&apos;ll find convenient parking right on-site.
                 </p>
               </div>
             </div>
