@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -96,7 +97,7 @@ export default function Footer() {
             <a href="/sermons" className="text-gray-300 hover:text-white">Sermons</a>
             <a href="/visit" className="text-gray-300 hover:text-white">Visit</a>
             <a href="/eternity" className="text-gray-300 hover:text-white">Eternity</a>
-            <a href="#contact" className="text-gray-300 hover:text-white">Contact</a>
+            <Link href="/#contact" className="text-gray-300 hover:text-white">Contact</Link>
             <a href="https://app.easytithe.com/app/giving/plbctexas" className="text-gray-300 hover:text-white">Give</a>
           </div>
           <p className="text-gray-400 text-sm">

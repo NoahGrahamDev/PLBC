@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import ImageCarousel from './ImageCarousel';
 
 export default function Hero() {
@@ -18,18 +19,18 @@ export default function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a 
-              href="#services" 
+            <Link 
+              href="/#services" 
               className="bg-white text-[#2563eb] hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors shadow-lg"
             >
               Join Us This Sunday
-            </a>
-            <a 
-              href="#about" 
+            </Link>
+            <Link 
+              href="/#about" 
               className="border-2 border-white text-white hover:bg-white hover:text-[#2563eb] px-8 py-4 rounded-lg font-semibold text-lg transition-colors backdrop-blur-sm"
             >
               Learn More About Us
-            </a>
+            </Link>
           </div>
         </div>
         
