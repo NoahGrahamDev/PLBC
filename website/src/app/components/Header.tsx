@@ -37,12 +37,12 @@ export default function Header() {
             <a href="/sermons" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Sermons
             </a>
-            <a href="#services" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
+            <Link href="/#services" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Services
-            </a>
-            <a href="#contact" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
+            </Link>
+            <Link href="/#contact" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Contact
-            </a>
+            </Link>
             <a href="/visit" className="text-gray-700 hover:text-[#2563eb] font-medium transition-colors">
               Visit
             </a>
@@ -50,7 +50,7 @@ export default function Header() {
               Eternity
             </a>
             <a href="https://app.easytithe.com/app/giving/plbctexas" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-2 rounded-lg font-medium transition-colors">
-              Give Online
+              Give
             </a>
           </nav>
           
@@ -73,12 +73,12 @@ export default function Header() {
               <a href="/sermons" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Sermons
               </a>
-              <a href="#services" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
+              <Link href="/#services" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Services
-              </a>
-              <a href="#contact" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
+              </Link>
+              <Link href="/#contact" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Contact
-              </a>
+              </Link>
               <a href="/visit" className="block text-gray-700 hover:text-[#2563eb] hover:bg-white font-medium transition-all duration-200 px-4 py-3 rounded-lg">
                 Visit
               </a>
@@ -86,7 +86,7 @@ export default function Header() {
                 Eternity
               </a>
               <a href="https://app.easytithe.com/app/giving/plbctexas" className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-4 py-3 rounded-lg font-medium transition-all duration-200 text-center block shadow-sm hover:shadow-md">
-                Give Online
+                Give
               </a>
             </nav>
           </div>
