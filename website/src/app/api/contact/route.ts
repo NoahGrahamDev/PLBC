@@ -5,26 +5,7 @@ import { ContactEmailTemplate } from '../../components/ContactEmailTemplate';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, message, recaptchaToken } = body;
-
-    if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && process.env.RECAPTCHA_SECRET_KEY) {
-      if (!recaptchaToken) {
-        return NextResponse.json({ error: 'reCAPTCHA token is required' }, { status: 400 });
-      }
-
-      if (recaptchaToken !== 'test-token-for-development') {
-        const recaptchaResponse = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`
-        });
-        
-        const recaptchaData = await recaptchaResponse.json();
-        if (!recaptchaData.success) {
-          return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 });
-        }
-      }
-    }
+    const { name, email, phone, message } = body;
 
     if (!name || !email || !phone || !message) {
       return NextResponse.json({ 
