@@ -1,15 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
-
-declare global {
-  interface Window {
-    grecaptcha: {
-      getResponse: () => string;
-      reset: () => void;
-    };
-  }
-}
+import React, { useState } from 'react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -21,21 +12,6 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
-  const recaptchaRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
-      const script = document.createElement('script');
-      script.src = 'https://www.google.com/recaptcha/api.js';
-      script.async = true;
-      script.defer = true;
-      document.head.appendChild(script);
-
-      return () => {
-        document.head.removeChild(script);
-      };
-    }
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,37 +19,16 @@ export default function Contact() {
     setSubmitStatus('idle');
 
     try {
-      let recaptchaToken = '';
-      if (process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY) {
-        if (window.grecaptcha && typeof window.grecaptcha.getResponse === 'function') {
-          recaptchaToken = window.grecaptcha.getResponse();
-          if (!recaptchaToken || recaptchaToken.trim() === '') {
-            setSubmitStatus('error');
-            setErrorMessage('Please complete the reCAPTCHA verification.');
-            setIsSubmitting(false);
-            return;
-          }
-        } else {
-          setSubmitStatus('error');
-          setErrorMessage('reCAPTCHA is loading. Please wait and try again.');
-          setIsSubmitting(false);
-          return;
-        }
-      } else {
-        recaptchaToken = 'test-token-for-development';
-      }
-
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, recaptchaToken })
+        body: JSON.stringify(formData)
       });
 
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', phone: '', message: '' });
         setErrorMessage('');
-        window.grecaptcha?.reset();
       } else {
         const errorData = await response.json();
         console.error('Form submission error:', errorData);
@@ -244,19 +199,6 @@ export default function Contact() {
                     placeholder="How can we help you?"
                   />
                 </div>
-                
-                {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY && (
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Security Verification *
-                    </label>
-                    <div 
-                      ref={recaptchaRef}
-                      className="g-recaptcha" 
-                      data-sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
-                    ></div>
-                  </div>
-                )}
                 
                 <button
                   type="submit"
