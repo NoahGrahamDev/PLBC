@@ -98,6 +98,9 @@ export default function About() {
                   <p>
                     In her spare time, Megan enjoys music (she has a beautiful voice) and working with animals.
                   </p>
+                  <p className="mt-4">
+                    Telephone: (830)339-1631
+                  </p>
                 </div>
               </div>
 
@@ -119,10 +122,13 @@ export default function About() {
                 </p>
                 <div className="text-gray-700 font-[var(--font-open-sans)] text-left">
                   <p className="mb-4">
-                    Robert and his wife Becky came to Prairie Lea in 2024 as our Music Minister. Robert is a graduate of the University of Texas at San Antonio and Sioux Falls Seminary. They have 3 children and 3 grand-children.
+                    Robert and his wife Becky came to Prairie Lea in 2024 as our Music Minister. Robert is a graduate of the University of Texas at San Antonio and Sioux Falls Seminary. They have 3 children, 4 grandchildren, and 1 grand puppy.
                   </p>
                   <p>
                     In his spare time, Robert tutors and teaches math, finance, accounting, computer software, and SAT/ACT preparation.
+                  </p>
+                  <p className="mt-4">
+                    Email: rl@rlanning.com
                   </p>
                 </div>
               </div>
