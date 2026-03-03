@@ -11,13 +11,13 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between py-4">
           <Link href="/" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
-            <div className="w-28 h-14 relative">
+            <div className="w-36 h-16 relative">
               <Image
                 src="/swoosh-logo.png"
                 alt="Prairie Lea Baptist Church Swoosh Logo"
                 fill
                 className="object-contain"
-                sizes="112px"
+                sizes="144px"
               />
             </div>
             <div>
